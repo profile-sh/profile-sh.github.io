@@ -18,7 +18,7 @@ on:
 
 env:
   URL: ""
-
+  CHROMIUM_VERSION: ""
 jobs:
   check:
     # available images: https://github.com/actions/runner-images#available-images
@@ -60,7 +60,7 @@ jobs:
         id: setup-chrome
         uses: browser-actions/setup-chrome@v1
         with:
-          chrome-version: ${{ env.CHROMIUM_VERSION }}
+          chrome-version: ${{env.CHROMIUM_VERSION}}
       - name: Install chromedriver 🚗
         run: |
           npm install -g chromedriver@$CHROMIUM_VERSION
