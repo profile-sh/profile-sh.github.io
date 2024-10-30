@@ -13,6 +13,6 @@ jobs:
       build_source: '' # if building from repo root, use '' (not '.' or './')
       build_destination: _site
       sparse_checkout: true # if true, action/checkout will checkout only build_source
-      builder: jekyll
+      # builder: jekyll
       deploy_to: gh-pages
       
