@@ -6,5 +6,5 @@ jobs:
     name: call the reusable workflow
     uses: deploy-static-websites/workflows/.github/workflows/force_cancel_workflow_run.yml@main
     with:
-      run_id: '11590102016' # 
+      run_id: '11590851193' # 
       cancel_type: cancel # first try 'cancel', if it does not work, try 'force-cancel'
