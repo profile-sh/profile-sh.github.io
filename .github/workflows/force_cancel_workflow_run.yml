@@ -1,0 +1,10 @@
+name: try to force cancel a workflow run attached to this repo
+on:
+  workflow_dispatch 
+jobs:   
+  job1: 
+    name: call the reusable workflow
+    uses: deploy-static-websites/workflows/.github/workflows/force_cancel_workflow_run.yml@main
+    with:
+      run_id: '' # 
+      cancel_type: cancel # first try 'cancel', if it does not work, try 'force-cancel'
