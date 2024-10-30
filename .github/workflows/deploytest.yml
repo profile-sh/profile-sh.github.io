@@ -21,11 +21,18 @@ jobs:
         with:
           python-version: "3.13"
           cache: "pip" # caching pip dependencies
-      - name: Install and Build 🔧
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        env:
+          JEKYLL_ENV: production
+        # Outputs to the './_site' directory by default
         run: |
           pip3 install --upgrade nbconvert
-          export JEKYLL_ENV=production
-          bundle exec jekyll build
+          bundle exec jekyll build/
+          --config _config.yml/
+          --baseurl "${{ steps.pages.outputs.base_path }}"
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
