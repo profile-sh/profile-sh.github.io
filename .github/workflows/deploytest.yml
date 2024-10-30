@@ -44,6 +44,7 @@ jobs:
         with:
           python-version: "3.13"
           cache: "pip" # caching pip dependencies
+          
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -52,7 +53,7 @@ jobs:
           JEKYLL_ENV: production
         # Outputs to the './_site' directory by default
         run: |
-          pip3 install --upgrade nbconvert
+          pip3 install -r requirements.txt/
           bundle exec jekyll build/
           --config _config.yml/
           --source ${{inputs.build_source}}/
