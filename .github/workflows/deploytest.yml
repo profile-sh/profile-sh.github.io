@@ -17,29 +17,28 @@ on:
         required: false 
         type: string
         default: true 
-      builder:
+      build_languages:
         description: type of builder
-        required: false 
+        required: true 
         type: string
-        default: 'jekyll'
       deploy_to:
         description: site host type
-        required: false 
+        required: true  
         type: string
-        default: gh-pages
 jobs:
   build:
-    # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 
         uses: actions/checkout@v4
       - name: Setup Ruby 
+        if: contains(inputs.build_languages}},'ruby')
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3.5"
-          bundler-cache: true
-      - name: Setup Python 
+          bundler-cache: true 
+      - name: Setup Python
+        if: contains(inputs.build_languages}},'python')
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
@@ -49,17 +48,14 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: install and Build 
-        env:
-          JEKYLL_ENV: production
-        # Outputs to the './_site' directory by default
         run: |
-          pip3 install -r requirements.txt/
+          pip3 install -r requirements.txt 
+          export JEKYLL_ENV=production
           bundle exec jekyll build/
-          --config _config.yml/
           --source ${{inputs.build_source}}/
           --destination ${{inputs.build_destination}}/
           --url ${{inputs.build_url}}/
-          --baseurl ${{ steps.pages.outputs.base_path }}
+          --baseurl ${{steps.pages.outputs.base_path}}
       - name: Purge unused CSS 
         run: |
           npm install -g purgecss
@@ -68,8 +64,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{inputs.build_destination}}
-  deploy:
-    if: inputs.deploy_to == 'gh-pages'
+  deploy_gh_pages:
+    if: contains(inputs.deploy_to,'gh-pages')
     needs: build
     permissions:
       contents: read
