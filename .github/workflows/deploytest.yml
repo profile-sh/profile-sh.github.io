@@ -1,22 +1,45 @@
-name: Deploy test-workflow
-
+name: build and deploy jobs
 on:
-  workflow_dispatch:
-permissions:
-  contents: write
+  workflow_call:
+    inputs:
+      build_source:
+        description: source directory for build
+        required: false 
+        type: string
+        default: ''
+      build_destination:
+        description: destination directory for build
+        required: false 
+        type: string
+        default: _site
+      sparse_checkout:
+        description: action/checkout only selected directory
+        required: false 
+        type: string
+        default: true 
+      builder:
+        description: type of builder
+        required: false 
+        type: string
+        default: 'jekyll'
+      deploy_to:
+        description: site host type
+        required: false 
+        type: string
+        default: gh-pages
 jobs:
   build:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout 
         uses: actions/checkout@v4
-      - name: Setup Ruby 💎
+      - name: Setup Ruby 
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
-      - name: Setup Python 🐍
+      - name: Setup Python 
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
@@ -24,7 +47,7 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
+      - name: install and Build 
         env:
           JEKYLL_ENV: production
         # Outputs to the './_site' directory by default
@@ -32,16 +55,20 @@ jobs:
           pip3 install --upgrade nbconvert
           bundle exec jekyll build/
           --config _config.yml/
-          --baseurl "${{ steps.pages.outputs.base_path }}"
-      - name: Purge unused CSS 🧹
+          --source ${{inputs.build_source}}/
+          --destination ${{inputs.build_destination}}/
+          --url ${{inputs.build_url}}/
+          --baseurl ${{ steps.pages.outputs.base_path }}
+      - name: Purge unused CSS 
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: ${{inputs.build_destination}}
   deploy:
+    if: inputs.deploy_to == 'gh-pages'
     needs: build
     permissions:
       contents: read
