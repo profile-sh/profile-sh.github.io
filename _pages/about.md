@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: home
 permalink: /
 subtitle: <a href='#'>Contact/a> [sha](mailto:shahuss1115@gmail.com)
 
