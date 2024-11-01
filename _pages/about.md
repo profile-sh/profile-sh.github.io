@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Contact/a> [email](mailto:shahuss1115@gmail.com)
+subtitle: <a href='#'>Contact/a> [sha](mailto:shahuss1115@gmail.com)
 
 profile:
   align: right
