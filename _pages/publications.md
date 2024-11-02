@@ -2,7 +2,6 @@
 layout: page
 permalink: /publications/
 title: publications
-description: [google scholar](https://scholar.google.com/citations?user=e3M5dOEAAAAJ)
 nav: true
 nav_order: 6
 ---
@@ -12,7 +11,7 @@ nav_order: 6
 <!-- Bibsearch Feature -->
 
 {% include bib_search.liquid %}
-
+[google scholar](https://scholar.google.com/citations?user=e3M5dOEAAAAJ)
 <div class="publications">
 
 {% bibliography %}
