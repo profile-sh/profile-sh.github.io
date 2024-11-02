@@ -1,21 +1,123 @@
 {
   "basics": {
     "name": "Shahid Hussain",
-    "label": "",
+    "label": "Scientist, researcher, developer, teacher, writer",
     "image": "/assets/prof_pic.jpg",
     "email": "shahuss1115@gmail.com",
     "phone": "",
-    "url": "https://profile-sh.github.io/al-folio/",
+    "url": "https://profile-sh.github.io",
     "summary": " Experimenting with technologies for research, education, and development",
     "location": {
+       "countryCode": "US"
     },
     "profiles": [
-
+      {
+        "network": "Google Scholar",
+        "username": "e3M5dOEAAAAJ",
+        "url": "https://scholar.google.com.pk/citations?user=e3M5dOEAAAAJ"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "shahuss1115",
+        "url": "www.linkedin.com/in/shahuss1115"
+      }, 
+      {
+        "network": "GitHub",
+        "username": "xmile4ever",
+        "url": "https://github.com/xmile4ever"
+      }
     ]
   },
   "work": [
+    {
+      "name": "Independent learning",
+      "position": "GitHub CI/CD, serverless apps",
+      "startDate": "2024-08-01",
+      "endDate": "current",
+      "summary": "Creating tools for continuous deployment of serverless apps using github workflows and cloud services. Also, doing research on remote education and rural area community development."
+    },
+    {
+      "name": "Amazon",
+      "position": "Fulfillment Associate",
+      "url": "https://amazon.com",
+      "startDate": "2021-01-31",
+      "endDate": "2024-03-15",
+      "summary": "Buffering, sorting, picking, and stowing warehouse items"
+    },
+    {
+      "name": "Independent learning",
+      "position": "AWS, serverless apps, front-end development",
+      "url": "https://example.com",
+      "startDate": "2015-01-01",
+      "endDate": "2021-01-01",
+      "summary": "Frontend development using javascript, react, html, css, using AWS backend microservices --s3, cloudfront, route53, lambda, dynamodb, and ec2.",
+      "highlights": ["https://cosmicd.org, https://github.com/cosmicd"]
+    },
+    {
+      "name": "Karakoram International University",
+      "position": "Associate Professor, Physics",
+      "url": "https://kiu.edu.pk",
+      "startDate": "2013-08-01",
+      "endDate": "2014-08-01",
+      "summary": "Developed and taught a course on astronomy, developed a propsal for an educational (astronomical) observatory, developed Gilgit and Baltistan Astronomical Society",
+      "highlights": ["Astronomy"]
+    },
+    {
+      "name": "University of Delaware",
+      "position": "Research Associate, Physics",
+      "url": "https://udel.edu",
+      "startDate": "1933-01-01",
+      "endDate": "1955-01-01",
+      "summary": "Simulations and analysis in astroparticle physics for ICECUBE neutrino and cosmic ray observatory.",
+      "highlights": ["Astroparticle Physics"]
+    },
+    {
+      "name": "University of Delaware",
+      "position": "Postdoc researcher, Physics",
+      "url": "https://udel.edu",
+      "startDate": "2005-09-01",
+      "endDate": "2013-05-01",
+      "summary": "Simulations for radio detection of ultrahigh energy neutrinos.",
+      "highlights": ["Astroparticle Physics"]
+    }
   ],
   "education": [
+    {
+      "institution": "University of Kansas",
+      "location": "Lawerence, Kansas, USA",
+      "url": "https://ku.edu",
+      "area": "Astroparticle Physics",
+      "studyType": "PhD",
+      "startDate": "1999-09-01",
+      "endDate": "2005-05-15"
+    },
+    {
+      "institution": "Quaid-I-Azam University",
+      "location": "Islamabad, Pakistan",
+      "url": "https://qau.edu.pk",
+      "area": "Particle Physics",
+      "studyType": "MPhil",
+      "startDate": "1996-09-01",
+      "endDate": "1998-08-31"
+    },
+    {
+      "institution": "Punjab University",
+      "location": "Lahore, Pakistan",
+      "url": "https://pu.edu.pk",
+      "area": "Particle Physics",
+      "studyType": "MSc",
+      "startDate": "1993-09-01",
+      "endDate": "1995-12-15"
+    },
+    {
+      "institution": "Forman Christian College",
+      "location": "Lahore, Pakistan",
+      "url": "https://www.fccollege.edu.pk",
+      "area": "Physics, Mathematics",
+      "studyType": "BSc",
+      "startDate": "1988-09-01",
+      "endDate": "1992-05-15"
+    }
   ],
   "awards": [
 
@@ -25,14 +127,14 @@
   ],
   "publications": [
     {
-      "name": "doctoral_dissertation",
+      "name": "doctoral dissertation",
       "publisher": "",
       "releaseDate": "2005",
       "url": "https://www.researchgate.net/publication/234330510_Phenomenology_of_ultrahigh_energy_neutrino_interactions_and_fluxes",
-      "summary": "Doctoral Dissertation: Study focus is ultrahigh energy neutrinos, the particles that play a vital role in understanding evolution of the universe."
+      "summary": "Doctoral Dissertation: Study focus is ultrahigh energy neutrinos. Neutrinos play a vital role in understanding evolution of the universe."
           },
     {
-      "name": "all_pub",
+      "name": "publications",
       "publisher": "Google Scholar",
       "releaseDate": "",
       "url": "https://scholar.google.com/citations?user=e3M5dOEAAAAJ",
@@ -47,6 +149,8 @@
       "keywords": [
         "Research",
         "Teaching",
+        "Coding",
+        "Writing",
         "Technology development"
       ]
     }
@@ -81,12 +185,12 @@
   ],
   "projects": [
     {
-      "name": "GitHub workflows and actions",
-      "summary": "Some exercises to practice github workflows and actions",
-      "highlights": ["GitHub exercises", "GitHub workflows and actions"],
-      "startDate": "2024-10-01",
+      "name": "Current projects",
+      "summary": " See the link below for Current projects",
+      "highlights": ["Research and development projects"],
+      "startDate": "",
       "endDate": "",
-      "url": ""
+      "url": "https://profile-sh.github.io/projects"
     }
   ]
 }
