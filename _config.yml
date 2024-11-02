@@ -80,7 +80,7 @@ contact_note: >
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: shalog # blog_name will be displayed in your blog page
+blog_name: Blog # blog_name will be displayed in your blog page
 blog_description: miscellaneous articles
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
@@ -98,10 +98,6 @@ related_blog_posts:
 # Newsletter
 # -----------------------------------------------------------------------------
 
-newsletter:
-  enabled: false
-  endpoint: # your loops endpoint (e.g., https://app.loops.so/api/newsletter-form/YOUR-ENDPOINT)
-  # https://loops.so/docs/forms/custom-form
 
 # -----------------------------------------------------------------------------
 # Collections
