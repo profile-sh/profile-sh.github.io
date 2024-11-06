@@ -2,7 +2,7 @@
 layout: about
 title: home
 permalink: /
-subtitle: [sha](mailto:shahuss1115@gmail.com)
+subtitle: <a href="mailto:shahuss1115@gmail.com">Contact</a>
 nav: true
 nav_order: 1
 profile:
