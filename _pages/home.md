@@ -2,9 +2,9 @@
 layout: about
 title: home
 permalink: /
-subtitle: <a href='#'>Contact/a> [sha](mailto:shahuss1115@gmail.com)
+subtitle: [sha](mailto:shahuss1115@gmail.com)
 nav: true
-nav_order: 2
+nav_order: 1
 profile:
   align: right
   image: prof_pic.jpg
