@@ -25,9 +25,57 @@
         "network": "GitHub",
         "username": "xmile4ever",
         "url": "https://github.com/xmile4ever"
+      },
+      {
+        "network": "example static web app",
+        "username": "cosmicd",
+        "url": "https://cosmicd.org"
+      },
+      {
+        "network": "GitHub-archived",
+        "username": "cosmicd",
+        "url": "https://github.com/cosmicd"
       }
     ]
-  },
+  },  
+  "education": [
+    {
+      "institution": "University of Kansas",
+      "location": "Lawerence, Kansas, USA",
+      "url": "https://ku.edu",
+      "area": "Astroparticle Physics (details in pdf cv)",
+      "studyType": "PhD",
+      "startDate": "1999",
+      "endDate": "2005"
+    },
+    {
+      "institution": "Quaid-I-Azam University",
+      "location": "Islamabad, Pakistan",
+      "url": "https://qau.edu.pk",
+      "area": "Particle Physics",
+      "studyType": "MPhil",
+      "startDate": "1996",
+      "endDate": "1998"
+    },
+    {
+      "institution": "Punjab University",
+      "location": "Lahore, Pakistan",
+      "url": "https://pu.edu.pk",
+      "area": "Particle Physics",
+      "studyType": "MSc",
+      "startDate": "1993",
+      "endDate": "1995"
+    },
+    {
+      "institution": "Forman Christian College",
+      "location": "Lahore, Pakistan",
+      "url": "https://www.fccollege.edu.pk",
+      "area": "Physics, Mathematics",
+      "studyType": "BSc",
+      "startDate": "1988",
+      "endDate": "1992"
+    }
+  ],
   "work": [
     {
       "name": "Independent learning",
@@ -79,44 +127,6 @@
       "endDate": "2013-05-01",
       "summary": "Simulations for radio detection of ultrahigh energy neutrinos.",
       "highlights": ["Astroparticle Physics"]
-    }
-  ],
-  "education": [
-    {
-      "institution": "University of Kansas",
-      "location": "Lawerence, Kansas, USA",
-      "url": "https://ku.edu",
-      "area": "Astroparticle Physics",
-      "studyType": "PhD",
-      "startDate": "1999-09-01",
-      "endDate": "2005-05-15"
-    },
-    {
-      "institution": "Quaid-I-Azam University",
-      "location": "Islamabad, Pakistan",
-      "url": "https://qau.edu.pk",
-      "area": "Particle Physics",
-      "studyType": "MPhil",
-      "startDate": "1996-09-01",
-      "endDate": "1998-08-31"
-    },
-    {
-      "institution": "Punjab University",
-      "location": "Lahore, Pakistan",
-      "url": "https://pu.edu.pk",
-      "area": "Particle Physics",
-      "studyType": "MSc",
-      "startDate": "1993-09-01",
-      "endDate": "1995-12-15"
-    },
-    {
-      "institution": "Forman Christian College",
-      "location": "Lahore, Pakistan",
-      "url": "https://www.fccollege.edu.pk",
-      "area": "Physics, Mathematics",
-      "studyType": "BSc",
-      "startDate": "1988-09-01",
-      "endDate": "1992-05-15"
     }
   ],
   "awards": [
