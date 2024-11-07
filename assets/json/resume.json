@@ -69,7 +69,7 @@
       "startDate": "2015",
       "endDate": "2020",
       "summary": "Jupyter notebooks, web development --javascript, react, html, css, and AWS backend microservices --s3, cloudfront, route53, lambda, dynamodb, and ec2.",
-      "highlights": [python, data analysis, jupyter notebooks, javascript, reactJS, nodeJS, html, css, aws, serverless apps, aws microservices, docker]
+      "highlights": ["python, data analysis, jupyter notebooks, javascript, reactJS, nodeJS, html, css, aws, serverless apps, aws microservices, docker"]
     },
     {
       "name": "Karakoram International University",
