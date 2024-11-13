@@ -1,25 +1,55 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: GitHub pages
+description: 
 importance: 2
 category: work
 giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+GitHub pages are a static website deployed on GitHub free of charge, thanks to GitHub. The pages are used for documentation (for everything related to open source projects on GitHub) and GitHub user profiles.  In this project, we are going to learn how to create and deploy multi-repo GitHub pages under a GitHub organization, with [giscus app](https://giscus.app/) for comments. 
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+## 1. Setup a GitHub organization
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+The purpose of creating an organization is to isolate all the repos we will need in this project. You will be the only member of the organization, there is no need to add other members for now.
+- Exercise: Login into your GitHub account and create a free public organization with a name of your choice, for example "gh-pages-project". For help, visit [GiHub docs](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch).
+
+## 2. Setup a GitHub pages repo 
+
+We have an organization, "gh-pages-project" (the org name that you picked while creating the organization), we need a repo under this organization that is necessary for deploying GitHub pages.
+- Exercise: Go to your organization homepage, click on repositories, and create a new public repo with *your organization name* as the owner and the repo name "[your org name].github.io". Use "add a readme" option, for .gitignore option use jekyll, and for license use MIT license.
+
+If all of the steps were successful, visit the address https://[your org name].github.io and --you have a website!
+
+## 3. Add a jekyll theme
+
+Our website layout is very basic so far. To improve it, we need to use a jekyll theme that is compatible with GitHub pages. Visit [supported themes](https://pages.github.com/themes/) to see a list of the jekyll themes we can use for this project. To use the theme, we need to create a new file at the root of our repo.
+
+- Exercise: From homepage of your repo ("[your org name].github.io"), created a new file named _config.yml with the following content:
+
+```
+title: GitHub Pages
+description: Bookmark for updates!
+remote_theme: pages-themes/cayman
+plugins:
+- jekyll-remote-theme
+```
+Where "cayman" is the name of the theme we want to use. You may use any of the [supported themes](https://pages.github.com/themes/).
+
+## Create your first page
+
+So far we have been using our README.md file for our homepage. Let us create our first page with some content in it.
+
+- Exercise: Create a new file with the path "pages/home.md" and paste the following content in it:
+  ```
+  ---
+  layout: default
+  title: GitHub Pages
+  description: A project for learning how to create and deploy GitHub pages
+  permalink: /
+  ---
+  ```
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
