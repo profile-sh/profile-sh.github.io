@@ -7,7 +7,9 @@ category: work
 giscus_comments: true
 ---
 
-GitHub pages are a static website deployed on GitHub free of charge, thanks to GitHub. The pages are used for documentation (for everything related to open source projects on GitHub) and GitHub user profiles.  In this project, we are going to learn how to create and deploy multi-repo GitHub pages under a GitHub organization, with [giscus app](https://giscus.app/) for comments. 
+Regardless of what your work is, documenting the work is very important. If we do not document our work, with the passage of time we will forget the steps and process that helped us achieve a goal. Also, documentation helps showcase your work, collaborate with others, and also help others in learning. It also helps improve your writing.
+
+GitHub pages are a static website deployed on GitHub, free of charge, thanks to GitHub. The pages are used for documentation (for everything related to open source projects on GitHub) and GitHub user profiles.  In this project, we are going to learn how to create and deploy multi-repo GitHub pages under a GitHub organization, with [giscus app](https://giscus.app/) for comments. 
 
 ## 1. Setup a GitHub organization
 
@@ -36,11 +38,11 @@ plugins:
 ```
 Where "cayman" is the name of the theme we want to use. You may use any of the [supported themes](https://pages.github.com/themes/).
 
-## Create your first page
+## 4. Create your first page
 
 So far we have been using our README.md file for our homepage. Let us create our first page with some content in it.
 
-- Exercise: Create a new file with the path "pages/home.md" and paste the following content in it:
+- Exercise: Create a new file with the path "pages/home.md" and paste the following content in it and commit your changes:
   ```
   ---
   layout: default
@@ -48,64 +50,57 @@ So far we have been using our README.md file for our homepage. Let us create our
   description: A project for learning how to create and deploy GitHub pages
   permalink: /
   ---
+  This is my project about GitHub pages.
   ```
 
+Wait for a minute or so as your site rebuilds behind the scene, visit the pages site (https://[your org name].github.io) and refresh your browser, you will see the updated content.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+## 5. Enable GitHub pages for another repo
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+Sometimes we have multiple projects in several repos and we want to keep the documentation where it belongs. It would be great if we have a way to show all our documentation on a single website. Luckily, it is very easy with GitHub pages. Below we go through the steps needed to enable the pages from a different repo.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+- Exercise: Go to the homepage of the org for this project and click on repositories and create a new repository with the name "project-repo" (or any name you like) under the org for this project. Use options for creating readme.md, .gitignore (jekyll), and MIT license.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+- Exercise: Enable the GitHub pages for the new repo you have created. Visit the repo homepage and:
+  - click on "settings" 
+  - click on "pages" on the left sidebar
+  - under Build and Deployment, find the label "branch" select "main" and change "/(root)" to "/docs", then click "save".
 
-{% raw %}
+The last step above is necessary for enabling pages for a repo, it was not needed for the repo "gh-pages-project.github.io" as the pages are enabled by default for a repo with name *.github.io.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+- Exercise: Create a page in the new repo:
+  - create a file with the path "docs/_config.yml" in the repo we have created above (named "project-repo") and paste the following contents in it:
+    ```
+    title: GitHub Pages for a project repo
+    description: Bookmark for updates!
+    remote_theme: pages-themes/cayman
+    plugins:
+    - jekyll-remote-theme
+    ```
+  - create a file with path "docs/home.md" and paste the following contents in it:
+      ```
+      ---
+      layout: default
+      title: Project Homepage
+      description: Docs for the project-repo
+      permalink: /
+      ---
+      This is the docs homepage for the [project-repo](https://github.com/gh-pages-project/project-repo). Also visit the [root page](https://gh-pages-project.github.io/) for my GitHub profile.
+      ```
 
-{% endraw %}
+Visit the [pages](https://gh-pages-project.github.io/project-repo) and if everything went well you will see the homepage for the new repo. Well done! 
+Before we take a coffee break, let us create a link to the above page: 
+- Exercise: Create a link to the project-repo docs on the homepage of the repo "[your org name].github.io":
+  - Go to the repo "[your org name].github.io" and add the following line at the bottom of the file "pages/home.md" (you will need replace [your org name] with the name of your org:
+    ```
+    Visit my [project-repo](https://github.com/[your org name]/project-repo) [docs](https://[your org name].github.io/project-repo/).
+    ```
+
+Wait for a minute or so and visit the  page https://[your org name].github.io/ and click on the link you just created. 
+Great, now we can take a coffee break.
+
+
+
+
+
+
