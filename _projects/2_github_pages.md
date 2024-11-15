@@ -107,6 +107,8 @@ Great, let us take a coffee break.
 
 Taking comments from others about your work is a step towards collaboration and it also helps improve your work. Let us implement comments functionality for our site.
 
+In the subsections below, you will see some code using html, Liquid, and Jekyll [jekyll docs](https://jekyllrb.com/docs/). In this project we are not going to explain the code, that is beyond our current scope, we just want to implement comments here.
+
 ### 2.1 Enable discussions for the pages repo 
 
 Enabling discussions is a requirement to allow comments on our pages. For a demo, We will enable disvusssions only for the pages repo [your organization name].github.io, this will allow us to enable comments in the pages we create in the repo. 
@@ -147,7 +149,7 @@ The html code we need is unique for every repo. We can generate it for any or ev
   - under *Page ↔️ Discussions Mapping*, select *Discussion title contains page URL*
   - under *Discussion Category*, select *Announcements*
   - under *Features*, select "Enable reactions for the main post"
-  - under *Theme*, leave the default selection or select a theme you like
+  - under *Theme*, select a theme
   - under *enable giscus* copy the generated html code, in my case it is:
     ```
     <script src="https://giscus.app/client.js"
@@ -174,7 +176,9 @@ The html code we need is unique for every repo. We can generate it for any or ev
     </div>
     ```
   - commit changes
+    
 ### 2.4 Create a page layout in the pages repo
+
 - Exercise: Visit the root folder of the pages repo:
   - create a new file with the path _layouts/page.liquid
   - paste the following code:
@@ -205,37 +209,50 @@ The html code we need is unique for every repo. We can generate it for any or ev
   - paste the following content in it and make changes for author name and date fields:
     ```
     ---
-    layout: post
-    title: A poage with comments enabled
+    layout: page
+    title: A page with comments enabled
     author: sha
     date: 14-11-2024
     description: test giscus comments
     giscus_comments: true
-    permalink: /test-comments/
     ---
   
     This is a test page with comments enabled.
     ```
   - commit changes
-  - 
-Let us link create link for the test_comments page for easy navigation:
+
+Let us create link for the test_comments page for easy navigation:
 
 Exercise: visit the root folder of the pages repo, edit the file pages/home.md by adding the following content at the bottom of the page:
 ```
-A page for testing comments is [here](/pages/test_comments.md)
+A page for testing comments is [here](test_comments.md)
 ```
 
-Great, we are done with enabling the comments. Break time.
+Another way to link the page is using the *link* tag:
+```
+A page for testing comments is [here]({% link pages/test_comments.md %}).
+```
 
-### 2.1 Enable discussions for the organization
+Note: The two methods used above for linking a page use different file paths for the same page, *test_comments.md vs pages/test_comments.md". In this introductory project we will not discuss this subject (links and linking in Jekyll)). A tutorial on Jekyll and Liquid syntax is beyond the scope of this project.
+Great, we are done with enabling the comments. 
 
-Enabling discussions is a requirement to allow comments on our pages, Instead of enabling discussions for each repo under our organization individually, we are going to enable discussions at the organization level. 
+### 2.6 Enable discussions for the organization
+
+Enabling discussions for a repo is a requirement to allow comments on our pages. We can also optionally enable discussions  at the organization level, that will be a place to discuss the organization level topics.
 
 - Exercise: Enable discussions for the organization
-  - under your organization, create a public repo named *.discussions* to host discussions (no need for a readme/.gitignore/license)
-  - visit you organiztion page (https://github.com/[your_organization_name]) and click *settings*
+  - under your organization, create a public repo named *.discussions* to host discussions 
+  - visit your organiztion page (https://github.com/[your_organization_name]) and click *settings*
   - near middle of the left side menu, click *Discussions*
   - select *Enable discussions for this organization*, select *[your organization name].discussions* for the repo to host discussions, and click *save*
+
+Great, we now have a place to discuss everything that comes under our organization. Next let us implement a GitHub workflow for our pages project. Break time.
+
+## Setup a GitHub workflow 
+
+
+
+
 
 
 
