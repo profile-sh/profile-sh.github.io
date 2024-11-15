@@ -89,7 +89,7 @@ The last step above is necessary for enabling pages for a repo, it was not neede
       description: Docs for the project-repo
       permalink: /
       ---
-      This is the docs homepage for the [project-repo](https://github.com/gh-pages-project/project-repo). Also visit the [root page](https://gh-pages-project.github.io/) for my GitHub profile.
+      This is the docs homepage for the [project-repo](https://github.com/gh-pages-project/project-repo). Also visit the [homepage](https://gh-pages-project.github.io/) for my GitHub profile.
       ```
 
 Visit the link https://[your organization name].github.io/project-repo and if everything went well you will see the homepage for the  project repo docs. Well done! 
@@ -248,7 +248,165 @@ Enabling discussions for a repo is a requirement to allow comments on our pages.
 
 Great, we now have a place to discuss everything that comes under our organization. Next let us implement a GitHub workflow for our pages project. Break time.
 
-## Setup a GitHub workflow 
+## 3. Setup a GitHub workflow 
+
+GitHub [actions and workflows](https://docs.github.com/en/actions) help us automate CI/CD. In fact, in this project, we are already using a GitHub workflow behind the scenes. Whenever, we make changes to a file in the pages and project repos ([your organization name].github.io and project-repo), GitHub runs a work flow to build and deploy the pages. If we click on *Actions* tab for one of the repos, we will see a list of runs of the workflow *pages build and deployment* under *All workflows*. This workflow runs whenever we commit to the main branch of our repo (the runs are listed under actions tab for each repo with pages enabled). 
+
+The default workflow mentioned above is nice but it is not in our hands. Let us create our own workflow to build and deploy GitHub pages (see [docs](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) for more info):
+
+### 3.1 Enable custom workflows for a repo
+The following exercise will disable the default workflow and enable our custom workflow to build and deploy pages.
+- Exercise: Enable custom worfkows for the repo pages
+  - click settings of the repo [your organization name].github.io
+  - click *Pages* on the left side menu
+  - under *Build and deployment*, select *Github Actions*  under *source*
+
+### 3.2 Write a custom workflow
+
+- Exercise: Write a workflow to build and deploy GitHub pages
+  - visit the root folder of the pages repo [your organization name].github.io
+  - create a new file with the path .github/workflows/build_deploy_gh_pages.yml
+  - paste the following content in it and commit changes:
+    ```
+    name: build_deploy_gh_pages
+    on: 
+      workflow_dispatch
+    
+    jobs:
+      # Build job
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v4
+          - name: Setup Pages
+            id: pages
+            uses: actions/configure-pages@v5
+          - name: Build with Jekyll
+            uses: actions/jekyll-build-pages@v1
+            with:
+              source: ./
+              destination: ./_site
+          - name: Upload artifact
+            uses: actions/upload-pages-artifact@v3
+            with:
+              path: ./_site
+      # Deployment job
+      deploy: 
+        permissions:
+          contents: read
+          pages: write
+          id-token: write
+        environment:
+          name: github-pages
+          url: ${{steps.deployment.outputs.page_url}}
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+          - name: Deploy to GitHub Pages
+            id: deployment
+            uses: actions/deploy-pages@v4
+    ```
+### 3.3 Run the custom workflow
+The above workflow will not run automatically. Every time we want to rebuild the pages after making changes, we will need to run the workflow manually as follows:
+- click *Actions* tab of the repo
+- on left side menu click build_deploy_gh_pages
+- click the dropdown *Run workflow* on the right side
+- wait for the run to finish
+- refresh your pages site and if everything went well, the site will reload successfully
+
+So far we have implemented a custom workflow only for the repo [your organization name].github.io. We will need to repeat the process for our other repo named project-repo:
+Exercise: Follow all steps in section 3 above for the repo named project-repo. The only change we need to make is the value of source field under actions/jekyll-build-pages@v1 in the workflow code: change "./" to "./docs".
+
+There is one improvement we should make. We have almost the same code for the workflows in both of the repos ([your organization name].github.io and project-repo). It would be nice if we can create a reusable workflow that both repositories can call. Let us do that now.
+### 3.4 Reusable workflow
+
+We need to create a new repo that will host the reusable workflow that both of our repos can call, then create a reusable workflow in it and change the code of the repo workflows we have created above so that we can call the reusable workflow from both repos.
+
+- Exercise:
+  - create a public repo named *workflows* under our organization (follow the usual steps to create a repo under our organization).
+  - in the root folder of the *workflows* repo, create a new file with the path ./github/workflows/build_deploy_gh_pages.yml, paste the following code in it and  commit changes:
+    ```
+    name: build_deploy_gh_pages reusable workflow
+    on:
+      workflow_call:
+        inputs:
+          build_source:
+            description: source directory for build
+            required: false 
+            type: string
+            default: ''
+          build_destination:
+            description: destination directory for build
+            required: false 
+            type: string
+            default: _site
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: checkout file
+            uses: actions/checkout@v4          
+          - name: Setup Pages
+            id: pages
+            uses: actions/configure-pages@v5
+          - name: jekyll-build-pages@v1
+            uses: actions/jekyll-build-pages@v1
+            with:
+              source: ${{inputs.build_source}}
+              destination: ${{inputs.build_destination}}
+          - name: Upload artifact
+            uses: actions/upload-pages-artifact@v3
+            with:
+              path: ${{inputs.build_destination}}
+      deploy_gh_pages:
+        needs: build
+        permissions:
+          contents: read
+          pages: write
+          id-token: write
+        environment:
+          name: github-pages
+          url: ${{steps.deployment.outputs.page_url}}
+        runs-on: ubuntu-latest
+        steps:
+          - name: Deploy to GitHub Pages
+            id: deployment
+            uses: actions/deploy-pages@v4
+    ```
+
+- Exercise:
+  - switch to the repo [your organization name].github.io
+  - open the ./github/workflows/build_deploy_gh_pages.yml file to edit and replace the content with the following code and commit changes:
+    ```
+    name: build_deploy_gh_pages
+    on:
+      workflow_dispatch 
+    jobs:   
+      job1: 
+        permissions:
+          contents: read
+          pages: write
+          id-token: write
+        name: call the reusable workflow
+        uses: gh-pages-project/workflows/.github/workflows/build_deploy_gh_pages.yml@main
+        with:
+          build_source: './'
+    ```
+
+Now let us test our new setup. Click on *Actions* tab and run the updated workflow. Wait for the workflow to finish. If it finishes successfully, go to your pages site and refresh your browser. If all went well you will see your site.
+
+We need to repeat the above steps for our repo named project-repo with the following change in the workflow code: Change the value of build_source from './' to './docs'. Also test the workflow.
+
+Great, our workflow setup is done. Happy writing :heart:.
+
+Acknowledgments: I got a lot of help from [github docs](https://docs.github.com) and [jekyll docs](https://jekyllrb.com/) for writing this document. 
+
+
+
+
+
+
 
 
 
