@@ -1,1 +1,1 @@
-A [blog](https://profile-sh.github.io) based on [al-folio based blog](https://profile-sh.github.io)
+A [blog](https://profile-sh.github.io) based on [al-folio](https://profile-sh.github.io)
