@@ -8,7 +8,7 @@ jobs:
       pages: write
       id-token: write
     name: call the reusable workflow
-    uses: deploy-static-websites/workflows/.github/workflows/build_deploy.yml@main
+    uses: workflows-and-actions/library/.github/workflows/build_deploy_custom.yml@main
     with:
       build_source: '' # if building from repo root, use '' (not '.' or './')
       build_destination: _site
