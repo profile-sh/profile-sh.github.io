@@ -8,7 +8,7 @@ author: sha
 date: 16-11-2024
 ---
 
-### Project page: [Create, build, and deploy GitHub Pages](https://profile-sh.github.io/docs/projects/gh_pages_project)
+### Project page: [Create, build, and deploy GitHub Pages](https://profile-sh.github.io/docs/projects/gh_pages)
 
 ### status: done
 
