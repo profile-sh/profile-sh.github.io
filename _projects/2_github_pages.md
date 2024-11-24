@@ -10,6 +10,8 @@ date: 16-11-2024
 
 ### Project page: [Create, build, and deploy GitHub Pages](https://profile-sh.github.io/docs/projects/gh_pages_project)
 
+status: done
+
 ### Abstract
 
 Documenting work is very important. If we do not document our work, with the passage of time we forget the steps and process that helped us achieve our goal. Also, documentation helps showcase work, collaborate with others, and makes it easier for others to build upon our dreams after we leave. It also helps improve writing. [GitHub pages](https://docs.github.com/en/pages) is an easy to use service for this purpose. 
