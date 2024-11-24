@@ -8,7 +8,7 @@ author: sha
 date: 17-11-2024
 ---
 
-### Project page: [GitHub workflows](https://profile-sh.github.io/docs/projects/gh_workflows_project)
+### Project page: [GitHub workflows](https://profile-sh.github.io/docs/projects/gh_workflows)
 
 ### status: done
 
