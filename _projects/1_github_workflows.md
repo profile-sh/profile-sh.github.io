@@ -10,6 +10,8 @@ date: 17-11-2024
 
 ### Project page: [GitHub workflows](https://profile-sh.github.io/docs/projects/gh_workflows_project)
 
+### status: done
+
 ### Abstract
 
 Software development involves several steps (installation, development, build, and deploy) that are repeated forever. GitHub workflows are a way to automate the software development cycle. In this project, we will create and use several workflows, reusable-workflows, and composite-actions to understand the GitHub workflow syntax. Visit [GitHub workflows and actions](https://docs.github.com/en/actions) for further help. 
