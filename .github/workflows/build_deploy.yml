@@ -13,6 +13,6 @@ jobs:
       build_source: ./
       build_destination: _site
       build_languages: 'ruby python'
-      build_script_code: 'jekyll'
+      build_script_code: 'jekyll gh-pages'
       deploy_to: gh-pages
       
