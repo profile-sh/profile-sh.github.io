@@ -4,7 +4,7 @@ title: GitHub Workflows
 description: Using GitHub actions and workflows
 importance: 1
 category: work
-author: sha
+author: {{site.author}}
 date: 17-11-2024
 ---
 
