@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Jupyterlite Demos
-description:
+description: Demos on how to configure, build, and deploy jupyterlite on GitHub
 importance: 3
 category: work
 author: {{site.author}}
