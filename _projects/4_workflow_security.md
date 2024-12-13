@@ -8,7 +8,7 @@ author: {{site.author}}
 date: 12-12-2024
 ---
 
-### Project page: [Create, build, and deploy GitHub Pages](https://profile-sh.github.io/docs/projects/workflow_security)
+### Project page: [Workflow Security](https://profile-sh.github.io/docs/projects/workflow_security)
 
 ### status: done
 
