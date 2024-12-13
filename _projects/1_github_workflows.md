@@ -5,7 +5,7 @@ description: GitHub actions and workflows
 importance: 1
 category: CI/CD workflows
 author: {{site.author}}
-date: 17-11-2024
+date: 24-11-2024
 ---
 
 ### Project page: [GitHub workflows](https://profile-sh.github.io/docs/projects/gh_workflows)
