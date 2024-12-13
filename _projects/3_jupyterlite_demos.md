@@ -3,7 +3,7 @@ layout: page
 title: Jupyterlite Demos
 description: Configure, build, and deploy jupyterlite
 importance: 3
-category: work
+category: deploy
 author: {{site.author}}
 date: 17-11-2024
 ---
