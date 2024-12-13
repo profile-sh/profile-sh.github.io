@@ -1,7 +1,7 @@
 ---
 layout: page
 title: GitHub Pages
-description: A basic project on how to create and deploy GitHub pages
+description: Create, build, and deploy GitHub pages
 importance: 2
 category: deploy
 author: {{site.author}}
