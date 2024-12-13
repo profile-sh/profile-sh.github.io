@@ -5,7 +5,7 @@ description: Create, build, and deploy GitHub pages
 importance: 2
 category: deploy
 author: {{site.author}}
-date: 16-11-2024
+date: 18-11-2024
 ---
 
 ### Project page: [Create, build, and deploy GitHub Pages](https://profile-sh.github.io/docs/projects/gh_pages)
