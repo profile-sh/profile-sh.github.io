@@ -1,7 +1,7 @@
 ---
 layout: page
 title: GitHub Workflows
-description: Using GitHub actions and workflows
+description: GitHub actions and workflows
 importance: 1
 category: CI/CD workflows
 author: {{site.author}}
