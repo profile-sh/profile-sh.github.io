@@ -3,7 +3,7 @@ layout: page
 title: GitHub Workflows
 description: Using GitHub actions and workflows
 importance: 1
-category: work
+category: CI/CD workflows
 author: {{site.author}}
 date: 17-11-2024
 ---
