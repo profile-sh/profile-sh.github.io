@@ -4,7 +4,7 @@ title: GitHub Pages
 description: A basic project on how to create and deploy GitHub pages
 importance: 2
 category: work
-author: sha
+author: {{site.author}}
 date: 16-11-2024
 ---
 
