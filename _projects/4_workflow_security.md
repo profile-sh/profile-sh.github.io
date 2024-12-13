@@ -3,7 +3,7 @@ layout: page
 title: Workflow Security
 description: Manage access and security in GitHub workflows
 importance: 4
-category: work
+category: CI/CD workflows
 author: {{site.author}}
 date: 12-12-2024
 ---
