@@ -3,8 +3,9 @@
     "name": "Shahid Hussain",
     "label": "Scientist, researcher, developer, teacher, writer",
     "email": "shahuss1115@gmail.com",
-    "cv_label": "CV",
-    "cv_url":"https://drive.google.com/file/d/1-Zkek38EAUpGbR1lVlKT6E4J0wfKI7Aa/view?usp=sharing",
+    "cv": {"label":"complete CV",
+    "url":"https://drive.google.com/file/d/1-Zkek38EAUpGbR1lVlKT6E4J0wfKI7Aa/view?usp=sharing"
+    },
     "summary": "Experimenting with technologies for research, education, and development",
     "location": "USA/Pakistan/Norway"
   },  
@@ -50,6 +51,7 @@
     {
       "name": "Independent learning",
       "position": "Web apps development, GitHub CI/CD",
+      "url":"https://profile-sh.github.io/projects",
       "startDate": "2024",
       "endDate": "current",
       "summary": "Creating tools for continuous deployment of serverless apps using github workflows and cloud services. Exploring resources and web technologies for research, education, and development"
@@ -65,10 +67,10 @@
     {
       "name": "Independent learning",
       "position": "AWS, serverless apps, front-end development",
-      "url": "https://profile-sh.github.io/assets/pdf/cv.pdf",
+      "url": "https://github.com/xmile4ever",
       "startDate": "2015",
       "endDate": "2020",
-      "summary": "Jupyter notebooks, web development --javascript, react, html, css, and AWS backend microservices --s3, cloudfront, route53, lambda, dynamodb, and ec2.",
+      "summary": "Jupyter notebooks, web development --javascript, react, html, css, and AWS backend microservices --s3, cloudfront, route53, lambda, dynamodb, and ec2. Contact for more details.",
       "highlights": ["python, data analysis, jupyter notebooks, javascript, reactJS, nodeJS, html, css, aws, serverless apps, aws microservices, docker"]
     },
     {
@@ -115,22 +117,21 @@
           },
     {
       "name": "all publications",
-      "url": "https://scholar.google.com/citations?user=e3M5dOEAAAAJ"
+      "url": "https://scholar.google.com/citations?user=e3M5dOEAAAAJ",
+      "summary": "Proceedings and journal publications listed on google scholar."
           },
     {
       "name": "selected publications",
       "url":"https://drive.google.com/file/d/1xlt17K-0lRiCk2Eyq5CoXMWOz2vtjsUw/view?usp=sharing"
+       "summary": "Selected journal publications."
           }
   ],
   "skills": [
-    {
+        {
       "name": "Generic skills",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
-      "skills_label": "detailed experience and skills",
-      "skills_url": "https://drive.google.com/file/d/1rpgWs1OQOTw_a0OR6ylhSdQizVxbfrsd/view?usp=sharing",
-      "presentations_label": "presentations",
-      "presentations_url": "https://drive.google.com/file/d/1jXgTU-I7DKdzXPRvJMiLCAaFRh6BVv20/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1rpgWs1OQOTw_a0OR6ylhSdQizVxbfrsd/view?usp=sharing",
       "keywords": [
         "Research",
         "Teaching",
@@ -138,6 +139,15 @@
         "Writing",
         "presenting",
         "developing web technologies"
+      ]
+    },
+    {
+      "name": "Presentations",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "url": "https://drive.google.com/file/d/1jXgTU-I7DKdzXPRvJMiLCAaFRh6BVv20/view?usp=sharing",
+      "keywords": [
+        "presentations in conferences and meetings"
       ]
     }
   ],
@@ -175,7 +185,7 @@
   ],
   "projects": [
     {
-      "name": "Current projects",
+      "name": "Current projects on GitHub",
       "url": "https://profile-sh.github.io/projects"
     }
   ]
