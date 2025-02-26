@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Shahid Hussain",
-    "label": "Scientist, researcher, developer, teacher, writer",
+    "label": "Scientist, researcher, physicist, developer, teacher, writer (research papers/reports/presentations)",
     "email": "shahuss1115@gmail.com",
-    "cv": {"label":"complete CV",
-    "url":"https://drive.google.com/file/d/1-Zkek38EAUpGbR1lVlKT6E4J0wfKI7Aa/view?usp=sharing"
-    },
+    "CV": {"label":"CV details",
+         "url":"https://drive.google.com/file/d/1-Zkek38EAUpGbR1lVlKT6E4J0wfKI7Aa/view?usp=sharing"
+       },
     "summary": "Experimenting with technologies for research, education, and development",
     "location": "USA/Pakistan/Norway"
   },  
@@ -117,20 +117,21 @@
           },
     {
       "name": "all publications",
+      "releaseDate": "2003-2015",
       "url": "https://scholar.google.com/citations?user=e3M5dOEAAAAJ",
       "summary": "Proceedings and journal publications listed on google scholar."
           },
     {
       "name": "selected publications",
+      "releaseDate": "2003-2015",
       "url":"https://drive.google.com/file/d/1xlt17K-0lRiCk2Eyq5CoXMWOz2vtjsUw/view?usp=sharing",
-       "summary": "Selected journal publications."
+      "summary": "Selected journal publications."
           }
   ],
   "skills": [
         {
       "name": "Generic skills",
       "level": "Master",
-      "icon": "fa-solid fa-hashtag",
       "url": "https://drive.google.com/file/d/1rpgWs1OQOTw_a0OR6ylhSdQizVxbfrsd/view?usp=sharing",
       "keywords": [
         "Research",
@@ -144,7 +145,6 @@
     {
       "name": "Presentations",
       "level": "Master",
-      "icon": "fa-solid fa-hashtag",
       "url": "https://drive.google.com/file/d/1jXgTU-I7DKdzXPRvJMiLCAaFRh6BVv20/view?usp=sharing",
       "keywords": [
         "presentations in conferences and meetings"
@@ -171,7 +171,6 @@
   "interests": [
     {
       "name": "Tech interests",
-      "icon": "fa-solid fa-tag",
       "keywords": [
         "Research, education, and development"
       ]
@@ -186,7 +185,9 @@
   "projects": [
     {
       "name": "Current projects on GitHub",
-      "url": "https://profile-sh.github.io/projects"
+      "url": "https://profile-sh.github.io/projects",
+      "startDate": "2024",
+      "endDate": "current"
     }
   ]
 }
