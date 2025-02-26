@@ -561,7 +561,7 @@ third_party_libraries:
 
 jekyll_get_json:
   - data: resume
-    json: assets/json/resume.json # it can also be an url
+    json: assets/json/resume.json # it can also be a url, in our case there is no data saved in resume.json, so jsonresume given below will be used
 jsonresume:
   - basics
   - education
