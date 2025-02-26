@@ -3,7 +3,8 @@
     "name": "Shahid Hussain",
     "label": "Scientist, researcher, developer, teacher, writer",
     "email": "shahuss1115@gmail.com",
-    "CV": {"url":"https://drive.google.com/file/d/1-Zkek38EAUpGbR1lVlKT6E4J0wfKI7Aa/view?usp=sharing","label":"pdf cv"},
+    "cv_label": "CV",
+    "cv_url":"https://drive.google.com/file/d/1-Zkek38EAUpGbR1lVlKT6E4J0wfKI7Aa/view?usp=sharing",
     "summary": "Experimenting with technologies for research, education, and development",
     "location": "USA/Pakistan/Norway"
   },  
@@ -12,7 +13,7 @@
       "institution": "University of Kansas",
       "location": "Kansas, USA",
       "url": "https://ku.edu",
-      "area": "Astroparticle Physics (details in pdf cv)",
+      "area": "Astroparticle Physics",
       "studyType": "PhD",
       "startDate": "1999",
       "endDate": "2005"
@@ -21,7 +22,7 @@
       "institution": "Quaid-I-Azam University",
       "location": "Islamabad, Pakistan",
       "url": "https://qau.edu.pk",
-      "area": "Astroparticle Physics (details in pdf cv)",
+      "area": "Astroparticle Physics",
       "studyType": "MPhil",
       "startDate": "1996",
       "endDate": "1998"
@@ -49,7 +50,6 @@
     {
       "name": "Independent learning",
       "position": "Web apps development, GitHub CI/CD",
-      "url": "ttps://profile-sh.github.io",
       "startDate": "2024",
       "endDate": "current",
       "summary": "Creating tools for continuous deployment of serverless apps using github workflows and cloud services. Exploring resources and web technologies for research, education, and development"
@@ -114,11 +114,12 @@
       "summary": "Doctoral Dissertation: Study focus is ultrahigh energy neutrinos. Neutrinos play a vital role in understanding evolution of the universe."
           },
     {
-      "name": "publications",
-      "publisher": "Google Scholar",
-      "releaseDate": "",
-      "url": "https://scholar.google.com/citations?user=e3M5dOEAAAAJ",
-      "summary": "publications listed on Google Scholar, see pdf cv for selected publications"
+      "name": "all publications",
+      "url": "https://scholar.google.com/citations?user=e3M5dOEAAAAJ"
+          },
+    {
+      "name": "selected publications",
+      "url":"https://drive.google.com/file/d/1xlt17K-0lRiCk2Eyq5CoXMWOz2vtjsUw/view?usp=sharing"
           }
   ],
   "skills": [
@@ -126,6 +127,10 @@
       "name": "Generic skills",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
+      "skills_label": "detailed experience and skills",
+      "skills_url": "https://drive.google.com/file/d/1rpgWs1OQOTw_a0OR6ylhSdQizVxbfrsd/view?usp=sharing",
+      "presentations_label": "presentations",
+      "presentations_url": "https://drive.google.com/file/d/1jXgTU-I7DKdzXPRvJMiLCAaFRh6BVv20/view?usp=sharing",
       "keywords": [
         "Research",
         "Teaching",
@@ -164,16 +169,13 @@
   ],
   "references":  [
     {
-      "name": "see pdf cv"
+      "name": "References and network",
+      "url": "https://drive.google.com/file/d/1gPRaji9nFkhwSkPULO5XtvhhJXni2fok/view?usp=sharing"
     }
   ],
   "projects": [
     {
       "name": "Current projects",
-      "summary": " working on it....",
-      "highlights": [],
-      "startDate": "",
-      "endDate": "",
       "url": "https://profile-sh.github.io/projects"
     }
   ]
