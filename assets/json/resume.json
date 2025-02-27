@@ -3,10 +3,10 @@
     "name": "Shahid Hussain",
     "label": "Scientist, researcher, physicist, developer, teacher, writer (research papers/reports/presentations)",
     "email": "shahuss1115@gmail.com",
-    "CV": {"label":"CV details",
+    "cv": {"label":"pdf cv",
          "url":"https://drive.google.com/file/d/1-Zkek38EAUpGbR1lVlKT6E4J0wfKI7Aa/view?usp=sharing"
        },
-    "summary": "Experimenting with technologies for research, education, and development",
+    "summary": "Developing technologies for research, education, and development",
     "location": "USA/Pakistan/Norway"
   },  
   "education": [
@@ -111,7 +111,7 @@
     {
       "name": "doctoral dissertation",
       "publisher": "",
-      "releaseDate": "2005",
+      "releaseDate": "1999-2005",
       "url": "https://www.researchgate.net/publication/234330510_Phenomenology_of_ultrahigh_energy_neutrino_interactions_and_fluxes",
       "summary": "Doctoral Dissertation: Study focus is ultrahigh energy neutrinos. Neutrinos play a vital role in understanding evolution of the universe."
           },
