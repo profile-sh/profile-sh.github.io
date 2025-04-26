@@ -13,4 +13,4 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Playing with a [Jekyll](https://jekyllrb.com) based theme ([alfolio](https://profile-sh.github.io/blog/2024/alfolio)).
+Playing with a [Jekyll](https://jekyllrb.com) based theme ([alfolio](https://github.com/alshedivat/al-folio)).
